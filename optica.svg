@@ -1,0 +1,470 @@
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'   width='768' height='974' viewBox='0 0 768 974' >
+  <script type='text/ecmascript'>
+  <![CDATA[
+  function hghl(el) { for ( var i in el ){ var elem = document.getElementById(el[i]); if ( elem != null ) elem.setAttribute('class','highlight');  }  }
+  function uhghl(el) { for ( var i in el ){ var elem = document.getElementById(el[i]); if ( elem != null ) elem.setAttribute('class','unhighlight'); }  } 
+  ]]>
+  </script> 
+
+<style type='text/css'>
+  text                { fill:#d2d9de; font-family: Segoe UI, 'Segoe UI', Dialog; font-size:13.0px; }
+  a text:hover        { fill:#ffffff; text-shadow: 0px 0px 6px #d0ce00; font-size:13px; }
+  text.highlight      { fill:#e79a33; text-shadow: 0px 0px 4px #674210; font-size:13px; }
+  text.white          { fill:#c5c5c5; }
+  text.colType        { fill:#b3b3b3; }
+  text.relName        { fill:#85909a; }
+  text.legendTitle    { fill:#93b6d8; font-weight:bold; }
+  text.legendSubTitle { fill:#b0b0b0; font-size: 12px; }
+  path, circle        { stroke:#89979e; stroke-width:1.25; fill:none;}
+  path.virtual        { stroke:#a364b5; }
+  path.logo           { fill:#b5c8a9;fill-opacity:1;stroke-width:0.3;stroke:#222222; }
+  path.dotted         { stroke-dasharray:4,2; }
+  path.unhighlight    { stroke-width:10; opacity:0;}
+  path.highlight      { stroke-width:3; stroke:#6db3d6; opacity:0.6;}
+  path.line           { stroke-width:5; stroke-linecap:round; stroke-linejoin:round; }
+  rect.entity         { fill:#2b2b2b; stroke-width:0;shape-rendering:crispEdges; filter:url(#shadow); }
+  line.delim          { stroke-width:1; shape-rendering:crispEdges; }
+  line.topLine        { stroke-width:3px; shape-rendering:crispEdges; }
+  text.callout        { fill:#dfe0c5; font-family: Segoe UI, 'Segoe UI', Dialog; font-size:13.0px; }
+  rect.callout        { fill:url(#calloutGradient); stroke:#3f3f3f; stroke-width:0.5; }
+  text.grp            { fill:#8a8a8a; }
+  rect.grp            { stroke:#a1a1a1; stroke-width:1.7; opacity:0.34; }
+  path.bgPattern      { fill:none;fill-opacity:1;stroke-width:0.6;stroke:#3b3c3d; }
+  path.eval           { fill:#44484b;stroke-width:0.6;stroke:#5a5c5f; }
+  rect.palpable       { fill:#504d41; }
+</style>
+<defs>
+    <pattern id="layoutBgA" width="60" height="34.64" patternUnits="userSpaceOnUse">
+        <rect x="0" y="0"  width="60" height="34.64" fill="#353637" />
+    </pattern>
+    <pattern id='layoutBgEval'  width='300' height='300' x='0' y='0' patternUnits="userSpaceOnUse">
+        <path class='eval' d='m 62.011835,91.267143 c 3.536475,3.175214 2.262669,8.705999 -1.637711,11.015197 -3.594697,5.8423 -6.34682,-2.892623 -9.715478,-4.653898 -5.609222,-2.838926 2.050802,-6.680123 4.77004,-8.319046 2.334696,-0.724067 4.935143,0.312302 6.583149,1.957747 z m -2.720492,2.538595 c -2.698397,-3.517732 -9.282815,1.269287 -3.69635,3.568637 2.765331,5.605665 7.052809,-0.56184 3.69635,-3.568637 z' />
+        <path class='eval' d='m 72.25864,84.624638 c 4.108046,3.143003 -0.737059,6.895259 -1.994918,8.323564 -3.586718,5.561143 -6.495079,-4.197379 -10.07759,-5.582178 -4.443422,-1.088878 1.349298,-7.249213 2.503526,-2.503449 2.464639,4.517161 2.304019,-3.70697 6.291113,-1.995914 1.280083,0.137865 2.410691,0.864819 3.277869,1.757977 z m -2.646109,2.323242 c -4.797162,-3.078383 -2.810517,6.305507 0.515161,1.990646 0.296432,-0.688582 0.01209,-1.493412 -0.515161,-1.990646 z' />
+        <path class='eval' d='m 78.230641,79.436735 c 4.142121,3.027466 -2.020102,10.435276 -3.450543,5.477315 3.306312,-5.248112 -9.186019,-2.220094 -5.805994,-8.77679 -0.544141,-3.93011 6.797826,-2.102227 3.386015,0.245477 -0.181085,2.915838 4.637371,1.019311 5.870522,3.053982 z' />
+        <path class='eval' d='m 82.744502,72.597397 c -4.901605,1.926521 1.146497,6.285555 2.559694,2.225783 6.21817,3.539297 -6.640186,8.416664 -7.590325,1.997457 -2.24365,-2.914883 4.026676,-10.148618 5.030631,-4.22324 z' />
+        <path class='eval' d='m 90.727458,64.259158 c 1.583987,1.690029 3.321317,3.2696 4.81267,5.026353 -2.535706,6.849794 -6.445583,-5.918773 -8.388458,-0.167017 0.782768,2.03426 5.877405,3.752079 2.670979,5.711199 -3.315119,1.519161 -5.782422,-5.157931 -8.858893,-6.780537 -4.229842,-1.139816 1.510134,-7.074128 2.586227,-2.385939 3.141198,5.495193 1.840537,-5.598295 7.177489,-1.404062 z' />
+        <path class='eval' d='m 99.622027,58.374253 c 1.493293,1.9548 -6.281936,7.024659 -0.885258,4.740447 0.386238,-4.434477 6.131941,-1.133173 2.175851,1.618005 -4.421491,6.12739 -13.666659,-3.151506 -7.058299,-7.136537 1.785129,-1.119329 4.348209,-0.743179 5.767706,0.778085 z m -2.900824,1.89746 c -3.608188,-2.208543 -2.280489,5.00803 -0.12563,0.329531 z' />
+        <path class='eval' d='m 115.18023,50.570441 c -1.61703,5.201678 -4.6204,-0.364502 -7.01598,-1.749619 -4.40977,2.122562 4.89641,4.913939 1.89606,7.018157 -2.48061,3.877635 -4.11404,-4.060614 -7.01192,-2.6391 -1.76318,3.107252 7.28394,6.252304 0.87346,7.876177 -1.74515,-2.956649 -9.055498,-5.610518 -3.950378,-8.66062 1.696478,1.897023 1.770418,-5.43503 5.347308,-3.072411 -0.44014,-5.474701 6.11995,-4.950882 7.7846,-0.815355 0.69076,0.682329 1.39587,1.351469 2.07685,2.042771 z' />
+        <path class='eval' d='m 120.54891,39.417125 c 2.50681,1.334124 4.80466,4.941837 0.75044,5.297362 -0.46414,1.89865 -5.25369,5.602652 -8.01742,1.815475 -3.87345,-2.809139 -0.0676,-7.603869 2.3036,-8.133924 1.6795,-3.853018 3.16703,-1.199465 4.96338,1.021087 z m -2.2464,2.175828 c -4.8049,-2.992167 -3.08987,6.380358 0.42374,2.036159 0.33052,-0.677508 0.12099,-1.525836 -0.42374,-2.036159 z' />
+        <path class='eval' d='m 128.50836,24.06821 c -5.10403,3.035506 3.20535,6.383175 5.05938,9.450276 -0.91853,2.95886 -4.06493,3.650723 -5.34691,0.265618 -2.25715,-2.089033 -4.65672,-6.948595 -7.07024,-2.584686 -4.71758,-3.764394 3.81217,-5.812054 5.12382,-9.226328 0.75738,0.677487 1.38637,1.498638 2.23389,2.095175 z' />
+        <path class='eval' d='m 137.14366,22.299812 c -3.09615,2.259885 0.71537,4.412454 1.99042,6.435866 -3.08975,5.080354 -5.91384,-2.98648 -8.92144,-4.094939 1.44369,-3.219573 3.3497,-1.335928 4.27156,-4.41058 0.97822,-0.894325 1.75044,1.871047 2.65946,2.069653 z' />
+        <path class='eval' d='m 136.85093,14.890174 c 2.31562,5.283511 -7.17975,1.771993 -1.29675,-0.475107 l 0.7108,0.08973 z m 4.867,5.317354 c 2.56912,1.439678 4.26517,4.725219 0.30678,5.233637 -1.56592,-3.098864 -9.51683,-5.749448 -3.64502,-8.633714 1.17746,0.325095 2.15375,2.591149 3.33824,3.400077 z' />
+        <path class='eval' d='m 149.95578,11.976423 c 2.50679,1.334142 4.80455,4.94192 0.75041,5.297394 -0.4641,1.898604 -5.25368,5.602645 -8.0174,1.81545 -3.87347,-2.80918 -0.0676,-7.603844 2.30366,-8.133968 1.67949,-3.8530525 3.16695,-1.1993573 4.96333,1.021124 z m -2.24641,2.175828 c -4.80489,-2.992177 -3.08986,6.380343 0.42374,2.036167 0.33055,-0.677518 0.121,-1.52585 -0.42374,-2.036167 z' />
+        <path class='eval' d='m 153.26135,7.538431 c 2.60497,1.5799548 6.03999,5.944272 1.08117,6.050232 -2.53319,-3.231828 -7.20316,-6.4304525 -8.84748,-9.4582682 1.89121,-2.8664883 3.78452,-2.247699 5.38514,0.8929426 0.78017,0.8503859 1.57195,1.6911437 2.38118,2.5150667 z' />
+    </pattern>
+    <radialGradient id='calloutGradient' cx='25%' cy='20%' r='80%' fx='10%' fy='10%'>
+        <stop offset='0%' stop-color='#584a23' />
+        <stop offset='100%' stop-color='#3f3824' />
+    </radialGradient>
+    <filter id='shadow' width='120%' height='120%'>
+        <feOffset result='offOut' in='SourceGraphic' dx='0' dy='0' />
+        <feColorMatrix result='matrixOut' in='offOut'
+                       values='0.1 0 0 0 0 0 0.1 0 0 0 0 0 0.1 0 0 0 0 0 0.2 0' />
+        <feGaussianBlur result='blurOut' in='matrixOut' stdDeviation='4' />
+        <feBlend in='SourceGraphic' in2='blurOut' />
+    </filter>
+    <filter id='fkShadow' height='130%'>
+        <feGaussianBlur in='SourceAlpha' stdDeviation='1.5'/> <!-- stdDeviation is how much to blur -->
+        <feOffset dx='1.2' dy='1.2' result='offsetblur'/> <!-- how much to offset -->
+        <feMerge>
+            <feMergeNode/> <!-- this contains the offset blurred image -->
+            <feMergeNode in='SourceGraphic'/> <!-- this contains the element that the filter is applied to -->
+        </feMerge>
+    </filter>
+    <radialGradient id='legendGradient' cx='5%' cy='5%' r='100%' >
+        <stop offset='0%' stop-color='#42505b' stop-opacity='1'/>
+        <stop offset='100%' stop-color='#33393d' stop-opacity='1' />
+    </radialGradient>
+    <symbol id='calloutArrowDown' >
+        <path d='M 0,0 L 8,12 L 16,0 z' style='fill:#f8f6d1;stroke:none; filter: url(#shadow);' />
+        <path d='M 0,0 L 8,12 L 16,0' style='stroke:#bebdbd; stroke-width:0.5;' />
+    </symbol>
+    <symbol id='calloutArrowUp' >
+        <path d='M 0,16 L 8,4 L 16,16 z' style='fill:#ffffff; stroke:none; filter: url(#shadow);' />
+        <path d='M 0,16 L 8,4 L 16,16' style='stroke:#bebdbd; stroke-width:0.5;' />
+    </symbol>
+    <symbol id='pk' >
+        <g transform='scale(0.99)'>
+            <path style='fill:#fffa7d;stroke:#765f03;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;'
+                  d='M 9.3678877,3.5695485 C 9.1030218,3.2729386 9.0796382,2.7628519 9.3396185,2.4517097 9.5449651,2.1956495 9.9040386,2.0980533 10.199638,2.2169415 10.533525,2.3415459 10.775153,2.706942 10.750675,3.0842709 10.737029,3.3980003 10.541153,3.699122 10.258248,3.8066067 9.966649,3.9250429 9.6169668,3.8418805 9.4008073,3.6062324 9.3894892,3.5943518 9.3785264,3.582104 9.3678886,3.5695487 z M 11.226617,6.9916004 C 11.888137,6.3548946 12.293488,5.4172188 12.311087,4.442353 12.378144,2.7379364 11.248678,1.0541269 9.7322318,0.44767357 8.3887112,-0.1280313 6.7865012,0.26822889 5.8918395,1.4007929 5.080823,2.3839145 4.9336815,3.8452096 5.3635544,5.101615 L 4.3670905,5.315913 C 4.0664984,5.3682645 4.0967703,5.6316724 4.2574957,5.8208829 L 4.9124,6.5655244 4.1543436,7.2512357 3.2136002,7.2163506 3.1674775,8.5586827 2.0406832,8.5086512 1.5965306,8.9299953 1.5471661,10.179833 0.75616674,10.195223 0.2112857,10.758575 0.15354288,11.735988 0.07199052,12.765553 c 0.36440953,0.238225 0.79006967,0.195492 1.44938278,-0.02675 L 6.3033562,8.1282037 6.8217102,8.6765688 C 6.9985465,8.8799427 7.3003699,8.7497574 7.358381,8.5016252 L 7.4938877,7.5084164 c 0.8537488,0.3985387 1.8303125,0.4711541 2.6851793,0.1427713 0.393927,-0.1407258 0.746858,-0.3701772 1.04755,-0.6595873 z'/>
+            <path d='M 6.8014948,6.3102123 0.15369063,13.024481 0.21560535,12.141962 6.0062342,6.2683782 z'
+                  style='fill:#ffe5a5;fill-opacity:1;stroke:#854e31;stroke-width:0.06912433;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:3.00300009'/>
+        </g>
+    </symbol>
+    <symbol id='idx1' >
+        <g transform='scale(0.99)'>
+            <rect width='4' height='4' x='7' y='1' style='fill:#ffff3f;stroke:#e3a23a;stroke-width:0.6;' ry='0.83'/>
+            <rect width='4' height='4' x='1' y='7' style='fill:#ffff3f;stroke:#e3a23a;stroke-width:0.6;' ry='0.832'/>
+            <rect width='4' height='4' x='7' y='7' style='fill:#ffff3f;stroke:#e3a23a;stroke-width:0.6;' ry='0.832'/>
+        </g>
+    </symbol>
+    <symbol id='idx2' >
+        <g transform='scale(0.99)'>
+            <rect width='4' height='3' x='6' y='1' style='fill:#7fc8e9;stroke:#2f6f8c;stroke-width:0.6;' ry='0.83'/>
+            <rect width='7' height='3' x='3' y='6' style='fill:#7fc8e9;stroke:#2f6f8c;stroke-width:0.6;' ry='0.832'/>
+        </g>
+    </symbol>
+    <symbol id='unq' >
+        <g transform='scale(0.99)'>
+            <rect style='fill:#fbea8e;stroke:#7e4d31;stroke-width:0.71934468;stroke-linecap:round;stroke-linejoin:round;'
+                  width='2.29' height='8.43' x='7.48' y='-0.76' ry='1.14' transform='matrix(0.701,0.713,-0.727,0.685,0,0)' />
+            <path style='fill:#323232;stroke:#858585;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;'
+                  d='m 26.04,8.64 a 4.13,4.13 0 1 1 -8.26,0 4.13,4.13 0 1 1 8.26,0 z'
+                  transform='matrix(1.025,0,0,0.987,-14.690,-3.862)' />
+            <text x='5.8' y='7.4' style='font-size:7px;fill:#8a8a8a;'>U</text>
+        </g>
+    </symbol>
+    <symbol id='idx' >
+        <g transform='scale(0.99)'>
+            <rect style='fill:#fbea8e;stroke:#7e4d31;stroke-width:0.71934468;stroke-linecap:round;stroke-linejoin:round;'
+                  width='2.29' height='8.43' x='7.48' y='-0.76' ry='1.14' transform='matrix(0.701,0.713,-0.727,0.685,0,0)' />
+            <path style='fill:#323232;stroke:#858585;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;'
+                  d='m 26.04,8.64 a 4.13,4.13 0 1 1 -8.26,0 4.13,4.13 0 1 1 8.26,0 z'
+                  transform='matrix(1.025,0,0,0.987,-14.690,-3.862)' />
+        </g>
+    </symbol>
+    <symbol id='fk' >
+        <g transform='scale(0.87)'>
+            <path style='fill:#3791c5;stroke:#3791c5;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+                  d='M 12.48,0.33 7.07,0.89 9.067,2.974 0.329,11.731 1.073,12.597 9.811,3.841 11.77,5.78 z' />
+        </g>
+    </symbol>
+    <symbol id='ref' >
+        <g transform='scale(0.87)'>
+            <path style='fill:#f3e1b7;stroke:#f3e1b7;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+                  d='M 0.10,12.70 5.31,12.15 3.40,10.06 11.82,1.32 11.11,0.45 2.68,9.19 0.80,7.24 z'/>
+        </g>
+    </symbol>
+    <symbol id='flag0' >
+        <g transform='scale(0.92)'>
+            <path style='fill:#b7d0f6;stroke:#404040;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+                  d='M 0.12,12.67 0.16,7.22 C 2.59,7.22 4.13,8.78 9.22,4.22 5.68,4.98 2.53,4.50 0.09,1.80 z'/>
+        </g>
+    </symbol>
+    <symbol id='flag1' >
+        <g transform='scale(0.92)'>
+            <path style='fill:#f4a393;stroke:#404040;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+                  d='M 0.12,12.67 0.16,7.22 C 2.59,7.22 4.13,8.78 9.22,4.22 5.68,4.98 2.53,4.50 0.09,1.80 z'/>
+        </g>
+    </symbol>
+    <symbol id='flag2' >
+        <g transform='scale(0.92)'>
+            <path style='fill:#77ec8b;stroke:#404040;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+                  d='M 0.12,12.67 0.16,7.22 C 2.59,7.22 4.13,8.78 9.22,4.22 5.68,4.98 2.53,4.50 0.09,1.80 z'/>
+        </g>
+    </symbol>
+    <symbol id='nn' >
+        <path style='stroke:#9b3e50;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+              d='M 0,0 3,3 M 0,3 3,0 z'/>
+    </symbol>
+    <symbol id='view' >
+        <g transform='scale(0.99)'>
+            <line x1='12' y1='6' x2='19' y2='0' stroke='gray' stroke-width='0.5' />
+            <line x1='0' y1='6' x2='7' y2='0' stroke='gray' stroke-width='0.5' />
+            <circle cx='3' cy='6' r='3' fill='#f9ebbc' stroke='gray' stroke-width='0.5'/>
+            <circle cx='10' cy='6' r='3' fill='#f9ebbc' stroke='gray' stroke-width='0.5'/>
+        </g>
+    </symbol>
+    <symbol id='logo' width="100" height="100">
+        <path style='stroke:#6285ca;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;'
+              d='M 15,1 29,8 29,22 15,29 1,22 1,9 Z'/>
+        <path style='stroke:#e37d00;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;'
+              d='M 25,10 25,20 15,25 5,20 5,10 15,15 25,10 15,5 9,8'/>
+        <path style='stroke:#e37d00;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;'
+              d='M 15,15 15,25'/>
+    </symbol>
+</defs>
+
+<defs>  <marker id='ZeroMore' viewBox='0 0 8.00 8.00' refX='4.00' refY='4.00' markerWidth='8.00' markerHeight='8.00' orient='auto-start-reverse'>
+    <path d='M 2.00,4.00 L 4.00,4.00 M 6.00,4.00 L 8.00,4.00 z' style='stroke-width:1;'/>
+    <path d='M 8.00,0.00 L 4.00,4.00 L 8.00,8.00' style='stroke-width:1;'/>
+    <path d='M 0.00,4.00 L 8.00,4.00 z' style='stroke-width:1;'/>
+  </marker>
+  <marker id='ZeroOne' viewBox='0 0 8.00 8.00' refX='4.00' refY='4.00' markerWidth='8.00' markerHeight='8.00' orient='auto-start-reverse'>
+    <path d='M 2.00,4.00 L 4.00,4.00 M 6.00,4.00 L 8.00,4.00 z' style='stroke-width:1;'/>
+  </marker>
+  <marker id='OneMore' viewBox='0 0 8.00 8.00' refX='4.00' refY='4.00' markerWidth='8.00' markerHeight='8.00' orient='auto-start-reverse'>
+    <path d='M 4.00,4.00 L 8.00,4.00 z' style='stroke-width:1;'/>
+    <path d='M 8.00,0.00 L 4.00,4.00 L 8.00,8.00' style='stroke-width:1;'/>
+    <path d='M 0.00,4.00 L 8.00,4.00 z' style='stroke-width:1;'/>
+  </marker>
+  <marker id='One' viewBox='0 0 8.00 8.00' refX='4.00' refY='4.00' markerWidth='8.00' markerHeight='8.00' orient='auto-start-reverse'>
+    <path d='M 4.00,4.00 L 8.00,4.00 z' style='stroke-width:1;'/>
+  </marker>
+  <marker id='Range' viewBox='0 0 8.00 8.00' refX='4.00' refY='4.00' markerWidth='8.00' markerHeight='8.00' orient='auto-start-reverse'>
+    <path d='M 4.00,4.00 L 8.00,4.00 z' style='stroke-width:1;'/>
+  </marker>
+  <marker id='Arrow' viewBox='0 0 8.00 8.00' refX='4.00' refY='4.00' markerWidth='8.00' markerHeight='8.00' orient='auto-start-reverse'>
+    <path d='M 4.000,4.000 L 8.000,4.000 L 4.000,0.000 L 8.000,4.000 L 4.000,8.000' style='stroke-width:1;'/>
+  </marker>
+  <linearGradient id='tbg_BED3F4' x1='0%' y1='0%' x2='0%' y2='100%' >
+     <stop offset='0%' stop-color='#172F58' /> 
+     <stop offset='40%' stop-color='#292A2D' /> 
+     <stop offset='100%' stop-color='#292A2D' /> 
+  </linearGradient>
+  <linearGradient id='tbg_C7F4BE' x1='0%' y1='0%' x2='0%' y2='100%' >
+     <stop offset='0%' stop-color='#215817' /> 
+     <stop offset='40%' stop-color='#292D29' /> 
+     <stop offset='100%' stop-color='#292D29' /> 
+  </linearGradient>
+</defs>
+
+<!-- == Shape Colors == -->
+<!-- == Desktop == -->
+<rect x='1' y='1' width='766' height='972' rx='8' ry='8' style='fill:url(#layoutBgA); stroke:#aaa; stroke-width:1px;' />
+<rect x='1' y='1' width='766' height='972' rx='8' ry='8' style='fill:url(#layoutBgEval);' />
+
+<!-- == Legend == -->
+<g transform='translate(10,10)'>
+  <rect x='10' y='10' width='310' height='70' rx='6' ry='6' style='fill:url(#legendGradient);filter:url(#shadow);'/> 
+  <use id='logo' x='20' y='40' xlink:href='#logo'><title>DbSchema Database Designer </title></use>  <text x='20' y='30' class='legendTitle' >Main Layout</text> 
+  <text x='57' y='52' class='legendSubTitle'><tspan>Comments as mouse-over tips, zoom and pan.<title>Read column and table comments by hovering the columns and tables.
+Zoom with CTRL+whell mouse button, pan by dragging the diagram with the right-mouse button</title></tspan></text> 
+  <a xlink:href='https%3A%2F%2Fdbschema.com'><text x='57' y='69' class='legendSubTitle'><tspan>by DbSchema.com - Wise Coders<title>DbSchema is an universal database designer.
+DbSchema has a free Community Edition.</title></tspan></text></a> 
+</g>
+
+<g transform='translate(0,110)'>
+<!-- == Group 'Collection 'proveedores'' == -->
+<rect class='grp' style='fill:#385B32;stroke:#516C4C' x='448' y='45' width='288' height='418' />
+<text x='460' y='61' style='fill:#516C4C;'>Collection &#39;proveedores&#39;</text>
+<!-- == Group 'Collection 'clientes'' == -->
+<rect class='grp' style='fill:#32415B;stroke:#4C586C' x='32' y='45' width='320' height='754' />
+<text x='44' y='61' style='fill:#4C586C;'>Collection &#39;clientes&#39;</text>
+<!-- == Fk 'color_vidrio_JSon' == -->
+<path id='color_vidrio_JSon'  onmouseover="hghl(['color_vidrio_JSon','optica.clientes.color_vidrio'])" onmouseout="uhghl(['color_vidrio_JSon','optica.clientes.color_vidrio'])" transform='translate(8,0)' class='unhighlight' d='M 208,704L 184,704Q 176,704 176,696L 176,656' >
+	<title>&#x1F517;  Foreign Key JSon
+color_vidrio ref gafa (  )</title>
+</path>
+<path transform='translate(8,0)' marker-start='url(#ZeroOne)' marker-end='url(#One)'    d='M 208,704L 184,704Q 176,704 176,696L 176,656' ><title>&#x1F517;  Foreign Key JSon
+color_vidrio ref gafa (  )</title></path>
+<text x='197' y='699' transform='rotate(0 197,699)' class='relName'>Obj</text>
+<!-- == Fk 'direccion_JSon' == -->
+<path id='direccion_JSon'  onmouseover="hghl(['direccion_JSon','optica.clientes.direccion'])" onmouseout="uhghl(['direccion_JSon','optica.clientes.direccion'])" transform='translate(8,0)' class='unhighlight' d='M 128,272L 128,240' >
+	<title>&#x1F517;  Foreign Key JSon
+direccion ref clientes (  )</title>
+</path>
+<path transform='translate(8,0)' marker-start='url(#ZeroOne)' marker-end='url(#One)'    d='M 128,272L 128,240' ><title>&#x1F517;  Foreign Key JSon
+direccion ref clientes (  )</title></path>
+<text x='131' y='270' transform='rotate(270 131,270)' class='relName'>Obj</text>
+<!-- == Fk 'direccion_JSon' == -->
+<path id='direccion_JSon'  onmouseover="hghl(['direccion_JSon','optica.proveedores.direccion'])" onmouseout="uhghl(['direccion_JSon','optica.proveedores.direccion'])" transform='translate(8,0)' class='unhighlight' d='M 544,272L 544,240' >
+	<title>&#x1F517;  Foreign Key JSon
+direccion ref proveedores (  )</title>
+</path>
+<path transform='translate(8,0)' marker-start='url(#ZeroOne)' marker-end='url(#One)'    d='M 544,272L 544,240' ><title>&#x1F517;  Foreign Key JSon
+direccion ref proveedores (  )</title></path>
+<text x='547' y='270' transform='rotate(270 547,270)' class='relName'>Obj</text>
+<!-- == Fk 'empleado_JSon' == -->
+<path id='empleado_JSon'  onmouseover="hghl(['empleado_JSon','optica.clientes.empleado'])" onmouseout="uhghl(['empleado_JSon','optica.clientes.empleado'])" transform='translate(8,0)' class='unhighlight' d='M 240,480L 240,400' >
+	<title>&#x1F517;  Foreign Key JSon
+empleado ref ventas (  )</title>
+</path>
+<path transform='translate(8,0)' marker-start='url(#ZeroOne)' marker-end='url(#One)'    d='M 240,480L 240,400' ><title>&#x1F517;  Foreign Key JSon
+empleado ref ventas (  )</title></path>
+<text x='243' y='478' transform='rotate(270 243,478)' class='relName'>Obj</text>
+<!-- == Fk 'gafa_JSon' == -->
+<path id='gafa_JSon'  onmouseover="hghl(['gafa_JSon','optica.clientes.gafa'])" onmouseout="uhghl(['gafa_JSon','optica.clientes.gafa'])" transform='translate(8,0)' class='unhighlight' d='M 176,480L 176,472Q 176,464 184,464L 248,464Q 256,464 256,456L 256,400' >
+	<title>&#x1F517;  Foreign Key JSon
+gafa ref ventas (  )</title>
+</path>
+<path transform='translate(8,0)' marker-start='url(#ZeroOne)' marker-end='url(#One)'    d='M 176,480L 176,472Q 176,464 184,464L 248,464Q 256,464 256,456L 256,400' ><title>&#x1F517;  Foreign Key JSon
+gafa ref ventas (  )</title></path>
+<text x='179' y='478' transform='rotate(270 179,478)' class='relName'>Obj</text>
+<!-- == Fk 'graduacion_JSon' == -->
+<path id='graduacion_JSon'  onmouseover="hghl(['graduacion_JSon','optica.clientes.graduacion'])" onmouseout="uhghl(['graduacion_JSon','optica.clientes.graduacion'])" transform='translate(8,0)' class='unhighlight' d='M 80,688L 80,656' >
+	<title>&#x1F517;  Foreign Key JSon
+graduacion ref gafa (  )</title>
+</path>
+<path transform='translate(8,0)' marker-start='url(#ZeroOne)' marker-end='url(#One)'    d='M 80,688L 80,656' ><title>&#x1F517;  Foreign Key JSon
+graduacion ref gafa (  )</title></path>
+<text x='83' y='686' transform='rotate(270 83,686)' class='relName'>Obj</text>
+<!-- == Fk 'marcas_JSon' == -->
+<path id='marcas_JSon'  onmouseover="hghl(['marcas_JSon','optica.proveedores.marcas'])" onmouseout="uhghl(['marcas_JSon','optica.proveedores.marcas'])" transform='translate(8,0)' class='unhighlight' d='M 640,272L 640,232Q 640,224 632,224L 624,224' >
+	<title>&#x1F517;  Foreign Key JSon
+marcas ref proveedores (  )</title>
+</path>
+<path transform='translate(8,0)' marker-start='url(#ZeroOne)' marker-end='url(#One)'    d='M 640,272L 640,232Q 640,224 632,224L 624,224' ><title>&#x1F517;  Foreign Key JSon
+marcas ref proveedores (  )</title></path>
+<text x='643' y='270' transform='rotate(270 643,270)' class='relName'>Ary</text>
+<!-- == Fk 'proveedores_fk_proveedores_clientes' == -->
+<path id='proveedores_fk_proveedores_clientes'  onmouseover="hghl(['proveedores_fk_proveedores_clientes','optica.proveedores._id','optica.clientes.marca_id'])" onmouseout="uhghl(['proveedores_fk_proveedores_clientes','optica.proveedores._id','optica.clientes.marca_id'])" transform='translate(8,0)' class='unhighlight' d='M 512,96L 240,96' >
+	<title>&#x1F517;  Foreign Key fk_proveedores_clientes
+proveedores ref clientes ( marcas._id -&gt; ventas.gafa.marca_id )</title>
+</path>
+<path transform='translate(8,0)' marker-start='url(#ZeroMore)' marker-end='url(#One)'  class='virtual'  d='M 512,96L 240,96' ><title>&#x1F517;  Foreign Key fk_proveedores_clientes
+proveedores ref clientes ( marcas._id -&gt; ventas.gafa.marca_id )</title></path>
+<text x='385' y='91' transform='rotate(0 385,91)' class='relName'>fk&#95;proveedores&#95;clientes</text>
+<!-- == Fk 'ventas_JSon' == -->
+<path id='ventas_JSon'  onmouseover="hghl(['ventas_JSon','optica.clientes.ventas'])" onmouseout="uhghl(['ventas_JSon','optica.clientes.ventas'])" transform='translate(8,0)' class='unhighlight' d='M 256,272L 256,232Q 256,224 248,224L 240,224' >
+	<title>&#x1F517;  Foreign Key JSon
+ventas ref clientes (  )</title>
+</path>
+<path transform='translate(8,0)' marker-start='url(#ZeroOne)' marker-end='url(#One)'    d='M 256,272L 256,232Q 256,224 248,224L 240,224' ><title>&#x1F517;  Foreign Key JSon
+ventas ref clientes (  )</title></path>
+<text x='259' y='270' transform='rotate(270 259,270)' class='relName'>Ary</text>
+<!-- == Table 'clientes' == -->
+<rect id='depict_optica&#46;clientes' class='entity' style='stroke:none;' x='112' y='72' width='128' height='160' rx='4' ry='4' />
+<path d='M 112 100 L 112 76 Q 112 72 116 72 L 236 72 Q 240 72 240 76 L 240 100 L112 100 ' style='fill:url(#tbg_BED3F4);stroke-width:0;' />
+<rect class='entity' x='112' y='72' width='128' height='160' rx='4' ry='4' style='fill:none;stroke:#27282C'/>
+<a xlink:href='#optica.clientes'><text x='150' y='91' >clientes</text><title>Collection optica.clientes</title></a>
+  <use id='nn' x='114' y='109' xlink:href='#nn'/><use id='pk' x='114' y='108' xlink:href='#pk'><title>&#x1F511;  Pk _id_ ( _id ) </title></use><a xlink:href='#optica.clientes__id'><text id='optica&#46;clientes&#46;&#95;id' x='131' y='119'>&#95;id</text><title>&#10697;  _id
+     * objectid</title></a>
+  <use id='nn' x='114' y='125' xlink:href='#nn'/><a xlink:href='#optica.clientes_nombre'><text id='optica&#46;clientes&#46;nombre' x='131' y='135'>nombre</text><title>&#10697;  nombre
+     * string</title></a>
+<text x='237' y='132' text-anchor='end' class='colType'>t</text>  <use id='nn' x='114' y='141' xlink:href='#nn'/><a xlink:href='#optica.clientes_direccion'><text id='optica&#46;clientes&#46;direccion' x='131' y='151' onmouseover="hghl(['direccion_JSon'])" onmouseout="uhghl(['direccion_JSon'])">direccion</text><title>&#10697;  direccion
+     * object
+ &#8601; direccion( direccion )</title></a>
+  <use id='nn' x='114' y='157' xlink:href='#nn'/><a xlink:href='#optica.clientes_telefono'><text id='optica&#46;clientes&#46;telefono' x='131' y='167'>telefono</text><title>&#10697;  telefono
+     * string</title></a>
+<text x='237' y='164' text-anchor='end' class='colType'>t</text>  <use id='nn' x='114' y='173' xlink:href='#nn'/><a xlink:href='#optica.clientes_email'><text id='optica&#46;clientes&#46;email' x='131' y='183'>email</text><title>&#10697;  email
+     * string</title></a>
+<text x='237' y='180' text-anchor='end' class='colType'>t</text>  <use id='nn' x='114' y='189' xlink:href='#nn'/><a xlink:href='#optica.clientes_fecha_registro'><text id='optica&#46;clientes&#46;fecha&#95;registro' x='131' y='199'>fecha&#95;registro</text><title>&#10697;  fecha_registro
+     * date</title></a>
+<text x='237' y='196' text-anchor='end' class='colType'>d</text>  <use id='nn' x='114' y='205' xlink:href='#nn'/><a xlink:href='#optica.clientes_ventas'><text id='optica&#46;clientes&#46;ventas' x='131' y='215' onmouseover="hghl(['ventas_JSon'])" onmouseout="uhghl(['ventas_JSon'])">ventas</text><title>&#10697;  ventas
+     * array[object]
+ &#8601; ventas( ventas )</title></a>
+
+<!-- == Table 'color_vidrio' == -->
+<rect id='depict_color&#95;vidrio' class='entity' style='stroke:none;' x='224' y='696' width='96' height='80' rx='4' ry='4' />
+<path d='M 224 724 L 224 700 Q 224 696 228 696 L 316 696 Q 320 696 320 700 L 320 724 L224 724 ' style='fill:url(#tbg_BED3F4);stroke-width:0;' />
+<rect class='entity' x='224' y='696' width='96' height='80' rx='4' ry='4' style='fill:none;stroke:#27282C'/>
+<a xlink:href='#color_vidrio'><text x='235' y='715' >color&#95;vidrio</text><title>Sub-document color_vidrio</title></a>
+  <use id='nn' x='226' y='733' xlink:href='#nn'/><a xlink:href='#color_vidrio_izquierdo'><text id='color&#95;vidrio&#46;izquierdo' x='243' y='743'>izquierdo</text><title>&#10697;  izquierdo
+     * string</title></a>
+<text x='317' y='740' text-anchor='end' class='colType'>t</text>  <use id='nn' x='226' y='749' xlink:href='#nn'/><a xlink:href='#color_vidrio_derecho'><text id='color&#95;vidrio&#46;derecho' x='243' y='759'>derecho</text><title>&#10697;  derecho
+     * string</title></a>
+<text x='317' y='756' text-anchor='end' class='colType'>t</text>
+<!-- == Table 'direccion' == -->
+<rect id='depict_direccion' class='entity' style='stroke:none;' x='48' y='280' width='128' height='160' rx='4' ry='4' />
+<path d='M 48 308 L 48 284 Q 48 280 52 280 L 172 280 Q 176 280 176 284 L 176 308 L48 308 ' style='fill:url(#tbg_BED3F4);stroke-width:0;' />
+<rect class='entity' x='48' y='280' width='128' height='160' rx='4' ry='4' style='fill:none;stroke:#27282C'/>
+<a xlink:href='#direccion'><text x='82' y='299' >direccion</text><title>Sub-document direccion</title></a>
+  <use id='nn' x='50' y='317' xlink:href='#nn'/><a xlink:href='#direccion_calle'><text id='direccion&#46;calle' x='67' y='327'>calle</text><title>&#10697;  calle
+     * string</title></a>
+<text x='173' y='324' text-anchor='end' class='colType'>t</text>  <use id='nn' x='50' y='333' xlink:href='#nn'/><a xlink:href='#direccion_numero'><text id='direccion&#46;numero' x='67' y='343'>numero</text><title>&#10697;  numero
+     * int</title></a>
+<text x='173' y='340' text-anchor='end' class='colType'>&#35;</text>  <use id='nn' x='50' y='349' xlink:href='#nn'/><a xlink:href='#direccion_piso'><text id='direccion&#46;piso' x='67' y='359'>piso</text><title>&#10697;  piso
+     * int</title></a>
+<text x='173' y='356' text-anchor='end' class='colType'>&#35;</text>  <use id='nn' x='50' y='365' xlink:href='#nn'/><a xlink:href='#direccion_puerta'><text id='direccion&#46;puerta' x='67' y='375'>puerta</text><title>&#10697;  puerta
+     * string</title></a>
+<text x='173' y='372' text-anchor='end' class='colType'>t</text>  <use id='nn' x='50' y='381' xlink:href='#nn'/><a xlink:href='#direccion_ciudad'><text id='direccion&#46;ciudad' x='67' y='391'>ciudad</text><title>&#10697;  ciudad
+     * string</title></a>
+<text x='173' y='388' text-anchor='end' class='colType'>t</text>  <use id='nn' x='50' y='397' xlink:href='#nn'/><a xlink:href='#direccion_codigo_postal'><text id='direccion&#46;codigo&#95;postal' x='67' y='407'>codigo&#95;postal</text><title>&#10697;  codigo_postal
+     * string</title></a>
+<text x='173' y='404' text-anchor='end' class='colType'>t</text>  <use id='nn' x='50' y='413' xlink:href='#nn'/><a xlink:href='#direccion_pais'><text id='direccion&#46;pais' x='67' y='423'>pais</text><title>&#10697;  pais
+     * string</title></a>
+<text x='173' y='420' text-anchor='end' class='colType'>t</text>
+<!-- == Table 'direccion' == -->
+<rect id='depict_direccion' class='entity' style='stroke:none;' x='464' y='280' width='128' height='160' rx='4' ry='4' />
+<path d='M 464 308 L 464 284 Q 464 280 468 280 L 588 280 Q 592 280 592 284 L 592 308 L464 308 ' style='fill:url(#tbg_C7F4BE);stroke-width:0;' />
+<rect class='entity' x='464' y='280' width='128' height='160' rx='4' ry='4' style='fill:none;stroke:#272C27'/>
+<a xlink:href='#direccion'><text x='498' y='299' >direccion</text><title>Sub-document direccion</title></a>
+  <use id='nn' x='466' y='317' xlink:href='#nn'/><a xlink:href='#direccion_calle'><text id='direccion&#46;calle' x='483' y='327'>calle</text><title>&#10697;  calle
+     * string</title></a>
+<text x='589' y='324' text-anchor='end' class='colType'>t</text>  <use id='nn' x='466' y='333' xlink:href='#nn'/><a xlink:href='#direccion_numero'><text id='direccion&#46;numero' x='483' y='343'>numero</text><title>&#10697;  numero
+     * int</title></a>
+<text x='589' y='340' text-anchor='end' class='colType'>&#35;</text>  <use id='nn' x='466' y='349' xlink:href='#nn'/><a xlink:href='#direccion_piso'><text id='direccion&#46;piso' x='483' y='359'>piso</text><title>&#10697;  piso
+     * int</title></a>
+<text x='589' y='356' text-anchor='end' class='colType'>&#35;</text>  <use id='nn' x='466' y='365' xlink:href='#nn'/><a xlink:href='#direccion_puerta'><text id='direccion&#46;puerta' x='483' y='375'>puerta</text><title>&#10697;  puerta
+     * string</title></a>
+<text x='589' y='372' text-anchor='end' class='colType'>t</text>  <use id='nn' x='466' y='381' xlink:href='#nn'/><a xlink:href='#direccion_ciudad'><text id='direccion&#46;ciudad' x='483' y='391'>ciudad</text><title>&#10697;  ciudad
+     * string</title></a>
+<text x='589' y='388' text-anchor='end' class='colType'>t</text>  <use id='nn' x='466' y='397' xlink:href='#nn'/><a xlink:href='#direccion_codigo_postal'><text id='direccion&#46;codigo&#95;postal' x='483' y='407'>codigo&#95;postal</text><title>&#10697;  codigo_postal
+     * string</title></a>
+<text x='589' y='404' text-anchor='end' class='colType'>t</text>  <use id='nn' x='466' y='413' xlink:href='#nn'/><a xlink:href='#direccion_pais'><text id='direccion&#46;pais' x='483' y='423'>pais</text><title>&#10697;  pais
+     * string</title></a>
+<text x='589' y='420' text-anchor='end' class='colType'>t</text>
+<!-- == Table 'empleado' == -->
+<rect id='depict_empleado' class='entity' style='stroke:none;' x='224' y='488' width='96' height='80' rx='4' ry='4' />
+<path d='M 224 516 L 224 492 Q 224 488 228 488 L 316 488 Q 320 488 320 492 L 320 516 L224 516 ' style='fill:url(#tbg_BED3F4);stroke-width:0;' />
+<rect class='entity' x='224' y='488' width='96' height='80' rx='4' ry='4' style='fill:none;stroke:#27282C'/>
+<a xlink:href='#empleado'><text x='239' y='507' >empleado</text><title>Sub-document empleado</title></a>
+  <use id='nn' x='226' y='525' xlink:href='#nn'/><a xlink:href='#empleado__id'><text id='empleado&#46;&#95;id' x='243' y='535'>&#95;id</text><title>&#10697;  _id
+     * objectid</title></a>
+  <use id='nn' x='226' y='541' xlink:href='#nn'/><a xlink:href='#empleado_nombre'><text id='empleado&#46;nombre' x='243' y='551'>nombre</text><title>&#10697;  nombre
+     * string</title></a>
+<text x='317' y='548' text-anchor='end' class='colType'>t</text>
+<!-- == Table 'gafa' == -->
+<rect id='depict_gafa' class='entity' style='stroke:none;' x='64' y='488' width='128' height='160' rx='4' ry='4' />
+<path d='M 64 516 L 64 492 Q 64 488 68 488 L 188 488 Q 192 488 192 492 L 192 516 L64 516 ' style='fill:url(#tbg_BED3F4);stroke-width:0;' />
+<rect class='entity' x='64' y='488' width='128' height='160' rx='4' ry='4' style='fill:none;stroke:#27282C'/>
+<a xlink:href='#gafa'><text x='112' y='507' >gafa</text><title>Sub-document gafa</title></a>
+  <use id='nn' x='66' y='525' xlink:href='#nn'/><a xlink:href='#gafa__id'><text id='gafa&#46;&#95;id' x='83' y='535'>&#95;id</text><title>&#10697;  _id
+     * objectid</title></a>
+  <use id='nn' x='66' y='541' xlink:href='#nn'/><a xlink:href='#gafa_marca_id'><text id='gafa&#46;marca&#95;id' x='83' y='551' onmouseover="hghl(['proveedores_fk_proveedores_clientes','optica.proveedores._id'])" onmouseout="uhghl(['proveedores_fk_proveedores_clientes','optica.proveedores._id'])">marca&#95;id</text><title>&#10697;  marca_id
+     * objectid
+ &#8601; proveedores( ventas.gafa.marca_id )</title></a>
+<a xlink:href='#gafa.marca_id'><use id='ref' x='180' y='540' xlink:href='#ref'/><title>&amp;#1F517;  
+Referred by proveedores ( marcas._id -&gt; ventas.gafa.marca_id ) </title></a>
+  <use id='nn' x='66' y='557' xlink:href='#nn'/><a xlink:href='#gafa_graduacion'><text id='gafa&#46;graduacion' x='83' y='567'>graduacion</text><title>&#10697;  graduacion
+     * object</title></a>
+  <use id='nn' x='66' y='573' xlink:href='#nn'/><a xlink:href='#gafa_tipo_montura'><text id='gafa&#46;tipo&#95;montura' x='83' y='583'>tipo&#95;montura</text><title>&#10697;  tipo_montura
+     * string</title></a>
+<text x='189' y='580' text-anchor='end' class='colType'>t</text>  <use id='nn' x='66' y='589' xlink:href='#nn'/><a xlink:href='#gafa_color_montura'><text id='gafa&#46;color&#95;montura' x='83' y='599'>color&#95;montura</text><title>&#10697;  color_montura
+     * string</title></a>
+<text x='189' y='596' text-anchor='end' class='colType'>t</text>  <use id='nn' x='66' y='605' xlink:href='#nn'/><a xlink:href='#gafa_color_vidrio'><text id='gafa&#46;color&#95;vidrio' x='83' y='615'>color&#95;vidrio</text><title>&#10697;  color_vidrio
+     * object</title></a>
+  <use id='nn' x='66' y='621' xlink:href='#nn'/><a xlink:href='#gafa_precio'><text id='gafa&#46;precio' x='83' y='631'>precio</text><title>&#10697;  precio
+     * int</title></a>
+<text x='189' y='628' text-anchor='end' class='colType'>&#35;</text>
+<!-- == Table 'graduacion' == -->
+<rect id='depict_graduacion' class='entity' style='stroke:none;' x='64' y='696' width='96' height='80' rx='4' ry='4' />
+<path d='M 64 724 L 64 700 Q 64 696 68 696 L 156 696 Q 160 696 160 700 L 160 724 L64 724 ' style='fill:url(#tbg_BED3F4);stroke-width:0;' />
+<rect class='entity' x='64' y='696' width='96' height='80' rx='4' ry='4' style='fill:none;stroke:#27282C'/>
+<a xlink:href='#graduacion'><text x='76' y='715' >graduacion</text><title>Sub-document graduacion</title></a>
+  <use id='nn' x='66' y='733' xlink:href='#nn'/><a xlink:href='#graduacion_izquierdo'><text id='graduacion&#46;izquierdo' x='83' y='743'>izquierdo</text><title>&#10697;  izquierdo
+     * object</title></a>
+  <use id='nn' x='66' y='749' xlink:href='#nn'/><a xlink:href='#graduacion_derecho'><text id='graduacion&#46;derecho' x='83' y='759'>derecho</text><title>&#10697;  derecho
+     * object</title></a>
+
+<!-- == Table 'marcas' == -->
+<rect id='depict_marcas' class='entity' style='stroke:none;' x='624' y='280' width='96' height='80' rx='4' ry='4' />
+<path d='M 624 308 L 624 284 Q 624 280 628 280 L 716 280 Q 720 280 720 284 L 720 308 L624 308 ' style='fill:url(#tbg_C7F4BE);stroke-width:0;' />
+<rect class='entity' x='624' y='280' width='96' height='80' rx='4' ry='4' style='fill:none;stroke:#272C27'/>
+<a xlink:href='#marcas'><text x='648' y='299' >marcas</text><title>Sub-document marcas</title></a>
+  <use id='nn' x='626' y='317' xlink:href='#nn'/><a xlink:href='#marcas__id'><text id='marcas&#46;&#95;id' x='643' y='327' onmouseover="hghl(['proveedores_fk_proveedores_clientes','optica.clientes.marca_id'])" onmouseout="uhghl(['proveedores_fk_proveedores_clientes','optica.clientes.marca_id'])">&#95;id</text><title>&#10697;  _id
+     * objectid
+ &#8599; proveedores( ventas.gafa.marca_id )</title></a>
+<a xlink:href='#marcas._id'><use id='fk' x='708' y='316' xlink:href='#fk'/><title>&amp;#1F517;  
+References clientes ( marcas._id -&gt; ventas.gafa.marca_id ) </title></a>
+  <use id='nn' x='626' y='333' xlink:href='#nn'/><a xlink:href='#marcas_nombre'><text id='marcas&#46;nombre' x='643' y='343'>nombre</text><title>&#10697;  nombre
+     * string</title></a>
+<text x='717' y='340' text-anchor='end' class='colType'>t</text>
+<!-- == Table 'proveedores' == -->
+<rect id='depict_optica&#46;proveedores' class='entity' style='stroke:none;' x='528' y='72' width='96' height='160' rx='4' ry='4' />
+<path d='M 528 100 L 528 76 Q 528 72 532 72 L 620 72 Q 624 72 624 76 L 624 100 L528 100 ' style='fill:url(#tbg_C7F4BE);stroke-width:0;' />
+<rect class='entity' x='528' y='72' width='96' height='160' rx='4' ry='4' style='fill:none;stroke:#272C27'/>
+<a xlink:href='#optica.proveedores'><text x='536' y='91' >proveedores</text><title>Collection optica.proveedores</title></a>
+  <use id='nn' x='530' y='109' xlink:href='#nn'/><use id='pk' x='530' y='108' xlink:href='#pk'><title>&#x1F511;  Pk _id_ ( _id ) </title></use><a xlink:href='#optica.proveedores__id'><text id='optica&#46;proveedores&#46;&#95;id' x='547' y='119'>&#95;id</text><title>&#10697;  _id
+     * objectid</title></a>
+  <use id='nn' x='530' y='125' xlink:href='#nn'/><a xlink:href='#optica.proveedores_nombre'><text id='optica&#46;proveedores&#46;nombre' x='547' y='135'>nombre</text><title>&#10697;  nombre
+     * string</title></a>
+<text x='621' y='132' text-anchor='end' class='colType'>t</text>  <use id='nn' x='530' y='141' xlink:href='#nn'/><a xlink:href='#optica.proveedores_direccion'><text id='optica&#46;proveedores&#46;direccion' x='547' y='151' onmouseover="hghl(['direccion_JSon'])" onmouseout="uhghl(['direccion_JSon'])">direccion</text><title>&#10697;  direccion
+     * object
+ &#8601; direccion( direccion )</title></a>
+  <use id='nn' x='530' y='157' xlink:href='#nn'/><a xlink:href='#optica.proveedores_telefono'><text id='optica&#46;proveedores&#46;telefono' x='547' y='167'>telefono</text><title>&#10697;  telefono
+     * string</title></a>
+<text x='621' y='164' text-anchor='end' class='colType'>t</text>  <use id='nn' x='530' y='173' xlink:href='#nn'/><a xlink:href='#optica.proveedores_fax'><text id='optica&#46;proveedores&#46;fax' x='547' y='183'>fax</text><title>&#10697;  fax
+     * string</title></a>
+<text x='621' y='180' text-anchor='end' class='colType'>t</text>  <use id='nn' x='530' y='189' xlink:href='#nn'/><a xlink:href='#optica.proveedores_NIF'><text id='optica&#46;proveedores&#46;NIF' x='547' y='199'>NIF</text><title>&#10697;  NIF
+     * string</title></a>
+<text x='621' y='196' text-anchor='end' class='colType'>t</text>  <use id='nn' x='530' y='205' xlink:href='#nn'/><a xlink:href='#optica.proveedores_marcas'><text id='optica&#46;proveedores&#46;marcas' x='547' y='215' onmouseover="hghl(['marcas_JSon'])" onmouseout="uhghl(['marcas_JSon'])">marcas</text><title>&#10697;  marcas
+     * array[object]
+ &#8601; marcas( marcas )</title></a>
+
+<!-- == Table 'ventas' == -->
+<rect id='depict_ventas' class='entity' style='stroke:none;' x='224' y='280' width='112' height='112' rx='4' ry='4' />
+<path d='M 224 308 L 224 284 Q 224 280 228 280 L 332 280 Q 336 280 336 284 L 336 308 L224 308 ' style='fill:url(#tbg_BED3F4);stroke-width:0;' />
+<rect class='entity' x='224' y='280' width='112' height='112' rx='4' ry='4' style='fill:none;stroke:#27282C'/>
+<a xlink:href='#ventas'><text x='258' y='299' >ventas</text><title>Sub-document ventas</title></a>
+  <use id='nn' x='226' y='317' xlink:href='#nn'/><a xlink:href='#ventas__id'><text id='ventas&#46;&#95;id' x='243' y='327'>&#95;id</text><title>&#10697;  _id
+     * objectid</title></a>
+  <use id='nn' x='226' y='333' xlink:href='#nn'/><a xlink:href='#ventas_fecha_venta'><text id='ventas&#46;fecha&#95;venta' x='243' y='343'>fecha&#95;venta</text><title>&#10697;  fecha_venta
+     * date</title></a>
+<text x='333' y='340' text-anchor='end' class='colType'>d</text>  <use id='nn' x='226' y='349' xlink:href='#nn'/><a xlink:href='#ventas_gafa'><text id='ventas&#46;gafa' x='243' y='359'>gafa</text><title>&#10697;  gafa
+     * object</title></a>
+  <use id='nn' x='226' y='365' xlink:href='#nn'/><a xlink:href='#ventas_empleado'><text id='ventas&#46;empleado' x='243' y='375'>empleado</text><title>&#10697;  empleado
+     * object</title></a>
+
+</g></svg>
