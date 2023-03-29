@@ -118,6 +118,12 @@ docker-compose up
 - `proveedores`: Contiene información sobre los proveedores, como nombre, dirección, teléfono, fax, NIF y marcas.
 - `clientes`: Contiene información sobre los clientes, como nombre, dirección, teléfono, correo electrónico, fecha de registro y ventas realizadas.
 
+## Ejecutar consultas de prueba mediante MongoDB Shell
+
+```bash
+docker compose exec mongodb mongosh optica queries.js
+```
+
 ## Detener el proyecto
 
 Para detener los contenedores de Docker y eliminar los recursos, ejecuta el siguiente comando en la terminal:
